@@ -6,7 +6,7 @@ Comprehensive data preparation, exploration, visualization, feature engineering,
 
 
 # Data
-
+The data from that dataset comes from real estate listings posted on [Alo Nhà Đất](https://alonhadat.com.vn) that was crawled in August 2020 by [Le Anh Duc](https://www.kaggle.com/ladcva)
 
 
 # Objective
