@@ -17,7 +17,7 @@ We will discuss:
 
 + The data from that dataset comes from real estate listings posted on [Alo Nhà Đất](https://alonhadat.com.vn) that was crawled in August 2020 by [Le Anh Duc](https://www.kaggle.com/ladcva)
 
-===================================================================================================
+===========================================================================
 
 ## Predicting Sale Price of Houses
 
@@ -45,9 +45,7 @@ Metrics like accuracy, precision, recall are good ways to evaluate classificatio
 
 - Remember to **log in**.
 
-- Scroll down to the bottom of the page, and click on the link **'train.csv'**, and then click the 'download' blue button towards the right of the screen, to download the dataset.
-
-- The download the file called **'test.csv'** and save it in the directory with the notebooks.
+- The download the file called **'VN_housing_dataset.csv'** and save it in the directory with the notebooks.
 
 
 
@@ -63,7 +61,7 @@ Metrics like accuracy, precision, recall are good ways to evaluate classificatio
 
 
 # Target variable
-Price_range
+`Price_range`
 
 # Problem Type
 Classification 
