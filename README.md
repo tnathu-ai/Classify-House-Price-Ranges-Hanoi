@@ -1,23 +1,73 @@
-# COSC2789_Group-Project
-
 # Assignment 3: Group Project - COSC2789
-Comprehensive data preparation, exploration, visualization, feature engineering, and regression modeling for a case study: 
 
+# Machine Learning Pipeline - Data Analysis
 
+In the following notebooks, we will go through the implementation of each of the steps in the Machine Learning Pipeline. 
+
+We will discuss:
+
+1. **Data Analysis**
+2. Feature Engineering
+3. Feature Selection
+4. Model Training
+5. Obtaining Predictions / Scoring
 
 # Data
-The data from that dataset comes from real estate listings posted on [Alo Nhà Đất](https://alonhadat.com.vn) that was crawled in August 2020 by [Le Anh Duc](https://www.kaggle.com/ladcva)
++ We will use the house price dataset available on [Kaggle.com](https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data). See below for more details.
+
++ The data from that dataset comes from real estate listings posted on [Alo Nhà Đất](https://alonhadat.com.vn) that was crawled in August 2020 by [Le Anh Duc](https://www.kaggle.com/ladcva)
+
+===================================================================================================
+
+## Predicting Sale Price of Houses
+
+The aim of the project is to build a machine learning model to predict the sale price of homes based on different explanatory variables describing aspects of residential houses.
 
 
-# Objective
+### Why is this important? 
+
+Predicting house prices is useful to identify fruitful investments or to determine whether the price advertised for a house is over or under-estimated in Hanoi.
+
+
+### What is the objective of the machine learning model?
+
+We aim to minimise the difference between the real price and the price estimated by our model. We will evaluate model performance with the:
+
+### Metrics
+Metrics like accuracy, precision, recall are good ways to evaluate classification models for balanced datasets, but if the data is imbalanced and there’s a class disparity, then other methods like ROC/AUC, Gini coefficient perform better in evaluating the model performance.
+
+
+### How do I download the dataset?
+
+**Instructions also in the lecture "Download Dataset" in section 1 of the course**
+
+- Visit the [Kaggle Website](https://www.kaggle.com/ladcva/vietnam-housing-dataset-hanoi).
+
+- Remember to **log in**.
+
+- Scroll down to the bottom of the page, and click on the link **'train.csv'**, and then click the 'download' blue button towards the right of the screen, to download the dataset.
+
+- The download the file called **'test.csv'** and save it in the directory with the notebooks.
+
+
+
+**Note the following:**
+
+-  You need to be logged in to Kaggle in order to download the datasets.
+-  You need to accept the terms and conditions of the competition to download the dataset
+-  If you save the file to the directory with the jupyter notebook, then you can run the code as it is written here.
+
+
+
 
 
 
 # Target variable
+Price_range
 
 # Problem Type
+Classification 
 
-# Metric:
 
 
 # Key Findings:
