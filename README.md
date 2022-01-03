@@ -64,7 +64,7 @@ Metrics like accuracy, precision, recall are good ways to evaluate classificatio
 `Price_range`
 
 # Problem Type
-Classification 
+Multiclass Classification Problem
 
 
 
