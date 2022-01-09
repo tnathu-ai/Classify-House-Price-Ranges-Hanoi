@@ -157,4 +157,4 @@ def update_graph(ctg_value, num_value, chart_choice):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True, dev_tools_ui=False, dev_tools_props_check=True, port=8000)
+    app.run_server(debug=True, dev_tools_ui=False, dev_tools_props_check=True)
