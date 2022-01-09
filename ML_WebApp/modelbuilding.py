@@ -10,18 +10,10 @@ import pickle
 
 # train test split
 
-
 def splitdata(df):
-    # train = df.drop('Price_range', axis=1)  # predictive variables
+    train = df.drop('Price_range', axis=1)  # predictive variables
 
-    train = df[['District',
-                'House_type',
-                'Legal_documents',
-                'No_bedroom',
-                'No_floor',
-                'Month']]  # target
-
-    test = df['Price_range']
+    test = df['Price_range'] # target
 
     X_train, X_test, y_train, y_test = train_test_split(
         train, test, test_size=0.3, random_state=42)
