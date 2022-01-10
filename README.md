@@ -161,6 +161,7 @@ scripts resolved the issue by clear out all the output to run through the whole 
 │                         generated with `pip freeze > requirements.txt`
 │
 ├── setup.py           <- Make this project pip installable with `pip install -e`
+|
 ├── src                <- Source code for use in this project.
 │   ├── __init__.py    <- Makes src a Python module
 │   │
@@ -177,7 +178,15 @@ scripts resolved the issue by clear out all the output to run through the whole 
 │   │
 │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
 │       └── visualize.py
-│
+|
+│── web_app                <- Source code for web app.
+│   │
+│   ├── dash_visualization           <- Scripts to visualize data using Dash
+│   │   └── app.py
+│   │
+│   ├── prediction_model       <- Scripts to build preditive model using Rest API in Flask
+│     └── main.py
+|
 └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
 ```
 
