@@ -78,3 +78,8 @@ target/
 
 # exclude data from source control by default
 /data/
+
+# exclude macOS
+.DS_Store
+.AppleDouble
+.LSOverride
