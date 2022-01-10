@@ -181,6 +181,8 @@ scripts resolved the issue by clear out all the output to run through the whole 
 │   ├── prediction_model       <- Scripts to build preditive model using Rest API in Flask
 │     └── main.py
 |
+│── .gitignore                <- plain text file contains files/directories to ignore
+|
 └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
 ```
 
