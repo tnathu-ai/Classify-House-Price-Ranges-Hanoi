@@ -2,7 +2,7 @@
 
 # Machine Learning Pipeline - Data Analysis
 
-In the following notebooks, we will go through the implementation of each of the steps in the Machine Learning Pipeline. 
+In the following notebooks, we will go through the implementation of each of the steps in the Machine Learning Pipeline.
 
 We will discuss:
 
@@ -13,29 +13,36 @@ We will discuss:
 5. Obtaining Predictions / Scoring
 
 # Data
-+ We will use the house price dataset available on [Kaggle.com](https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data). See below for more details.
 
-+ The data from that dataset comes from real estate listings posted on [Alo Nhà Đất](https://alonhadat.com.vn) that was crawled in August 2020 by [Le Anh Duc](https://www.kaggle.com/ladcva)
++ We will use the house price dataset available
+  on [Kaggle.com](https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data). See below for more
+  details.
+
++ The data from that dataset comes from real estate listings posted on [Alo Nhà Đất](https://alonhadat.com.vn) that was
+  crawled in August 2020 by [Le Anh Duc](https://www.kaggle.com/ladcva)
 
 ===========================================================================
 
 ## Predicting Sale Price Ranges of Houses in Hanoi
 
-The aim of the project is to build a machine learning model to predict and classify the sale price ranges of homes based on different explanatory variables describing aspects of residential houses.
+The aim of the project is to build a machine learning model to predict and classify the sale price ranges of homes based
+on different explanatory variables describing aspects of residential houses.
 
+### Why is this important?
 
-### Why is this important? 
-
-Predicting house prices is useful to identify fruitful investments or to determine whether the price advertised for a house is over or under-estimated in Hanoi.
-
+Predicting house prices is useful to identify fruitful investments or to determine whether the price advertised for a
+house is over or under-estimated in Hanoi.
 
 ### What is the objective of the machine learning model?
 
-We aim to minimise the difference between the real price and the price estimated by our model. We will evaluate model performance with the:
+We aim to minimise the difference between the real price and the price estimated by our model. We will evaluate model
+performance with the:
 
 ### Metrics
-Metrics like accuracy, precision, recall are good ways to evaluate classification models for balanced datasets, but if the data is imbalanced and there’s a class disparity, then other methods like ROC/AUC, Gini coefficient perform better in evaluating the model performance.
 
+Metrics like accuracy, precision, recall are good ways to evaluate classification models for balanced datasets, but if
+the data is imbalanced and there’s a class disparity, then other methods like ROC/AUC, Gini coefficient perform better
+in evaluating the model performance.
 
 ### How do I download the dataset?
 
@@ -47,42 +54,31 @@ Metrics like accuracy, precision, recall are good ways to evaluate classificatio
 
 - The download the file called **'VN_housing_dataset.csv'** and save it in the directory with the notebooks.
 
-
-
 **Note the following:**
 
--  You need to be logged in to Kaggle in order to download the datasets.
--  You need to accept the terms and conditions of the competition to download the dataset
--  If you save the file to the directory with the jupyter notebook, then you can run the code as it is written here.
-
-
-
-
-
+- You need to be logged in to Kaggle in order to download the datasets.
+- You need to accept the terms and conditions of the competition to download the dataset
+- If you save the file to the directory with the jupyter notebook, then you can run the code as it is written here.
 
 # Target variable
+
 `Price_range`
 
 # Problem Type
+
 Multiclass Classification Problem
-
-
 
 # Key Findings:
 
-
-
-
 # Application
 
-
-
 ## Future improvement:
+
 + I would like to try out more stacking and ensemble methods to improve the model.
 
 ## Productionization
 
-In this step, I built a flask API endpoint that was hosted on a local webserver 
+In this step, I built a flask API endpoint that was hosted on a local webserver
 
 # WORKING ON YOUR LOCAL COMPUTER
 
@@ -129,8 +125,6 @@ scripts resolved the issue by clear out all the output to run through the whole 
 1. `conda install -c conda-forge nbstripout` or `pip install nbstripout`
 
 2. `nbstripout filename.ipynb`
-
-
 
 ## Repository Structure
 

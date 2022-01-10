@@ -13,7 +13,7 @@ import pickle
 def splitdata(df):
     train = df.drop('Price_range', axis=1)  # predictive variables
 
-    test = df['Price_range'] # target
+    test = df['Price_range']  # target
 
     X_train, X_test, y_train, y_test = train_test_split(
         train, test, test_size=0.3, random_state=42)
@@ -63,7 +63,6 @@ def randomforest(df):
 
 
 # SVC
-
 def svc(df):
     X_train, X_test, y_train, y_test = splitdata(df)
     sv = SVC()
@@ -77,7 +76,6 @@ def svc(df):
 
 
 # KNN
-
 def knn(df):
     X_train, X_test, y_train, y_test = splitdata(df)
     knn = KNeighborsClassifier()

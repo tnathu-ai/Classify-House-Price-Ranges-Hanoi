@@ -42,7 +42,8 @@ def to_label_encoder(df, column, category):
 
 # create a function to encoding the categorical value
 def to_one_hot_encoder(df, column_name):
-    # we will set the drop to be if_binary so that we can delete an encoded column if that column have a binary cateogircal value such as true/false, yes/no
+    # we will set the drop to be if_binary so that we can delete an encoded column if that column have a binary
+    # cateogircal value such as true/false, yes/no
     ohe = OneHotEncoder(sparse=False, handle_unknown='error', drop='if_binary')
 
     # get the column and encoding it into dataframe

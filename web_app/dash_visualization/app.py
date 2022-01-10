@@ -57,7 +57,7 @@ def display_graphs(n_clicks):
                     'index': n_clicks
                 },
                 options=[{'label': 'Bar Chart', 'value': 'bar'},
-                         {'label': 'Scatter Chart', 'value': 'scatter'},],
+                         {'label': 'Scatter Chart', 'value': 'scatter'}, ],
                 value=plot, className="card"
             ),
             dcc.Dropdown(
@@ -66,7 +66,7 @@ def display_graphs(n_clicks):
                     'index': n_clicks
                 },
                 options=[{'label': c.replace('_', ' '), 'value': c} for c in ['House_type', 'Legal_documents',
-                                                            'No_floor', 'No_bedroom', 'Day_Of_Week']],
+                                                                              'No_floor', 'No_bedroom', 'Day_Of_Week']],
                 value='House_type',
                 clearable=False
             ),
@@ -84,7 +84,6 @@ def display_graphs(n_clicks):
 
 
 df = pd.read_csv("cleaned_data.csv", sep=',')
-
 
 app.layout = html.Div([
     html.Div(children=[
@@ -121,7 +120,7 @@ def dropdown_options(radio_value):
 
 @app.callback(
     Output({'type': 'dynamic-graph', 'index': MATCH}, 'figure'),
-     [Input(component_id={'type': 'dynamic-dpn-ctg', 'index': MATCH}, component_property='value'),
+    [Input(component_id={'type': 'dynamic-dpn-ctg', 'index': MATCH}, component_property='value'),
      Input(component_id={'type': 'dynamic-dpn-num', 'index': MATCH}, component_property='value'),
      Input({'type': 'dynamic-choice', 'index': MATCH}, 'value')]
 )
@@ -129,30 +128,30 @@ def update_graph(ctg_value, num_value, chart_choice):
     if chart_choice == 'bar':
         dff = df.groupby([ctg_value], as_index=False)[num_value].mean()
         prompt = {
-            'Price' : 'Average price in million VND per meter square',
-            'Area' : 'Average area in meter square',
-            'Length' : 'Average length in meter',
-            'Width' : 'Average width in meter'
+            'Price': 'Average price in million VND per meter square',
+            'Area': 'Average area in meter square',
+            'Length': 'Average length in meter',
+            'Width': 'Average width in meter'
         }
         fig = px.bar(dff, x=ctg_value, y=num_value, color_discrete_sequence=px.colors.sequential.Magenta,
                      labels={
                          ctg_value: ctg_value.replace('_', ' '),
                          num_value: prompt[num_value]
-                     }, title=ctg_value.replace('_',' ') + ' vs the average ' + num_value.lower() + ' bar plot')
+                     }, title=ctg_value.replace('_', ' ') + ' vs the average ' + num_value.lower() + ' bar plot')
         return fig
     elif chart_choice == 'scatter':
         prompt = {
-            'Area' : 'Area in meter square',
-            'Length' : 'Length in meter',
-            'Width' : 'Width in meter'
+            'Area': 'Area in meter square',
+            'Length': 'Length in meter',
+            'Width': 'Width in meter'
         }
         fig = px.scatter(df, x=num_value, y='Price', color=ctg_value,
                          color_discrete_sequence=px.colors.sequential.Viridis,
-                     labels={
-                         ctg_value: ctg_value.replace('_', ' '),
-                         num_value: prompt[num_value],
-                         'Price': 'Price (million VND per meter square)'
-                     }, title=num_value + ' vs the price with respect to ' + ctg_value.replace('_', ' '))
+                         labels={
+                             ctg_value: ctg_value.replace('_', ' '),
+                             num_value: prompt[num_value],
+                             'Price': 'Price (million VND per meter square)'
+                         }, title=num_value + ' vs the price with respect to ' + ctg_value.replace('_', ' '))
         return fig
 
 
