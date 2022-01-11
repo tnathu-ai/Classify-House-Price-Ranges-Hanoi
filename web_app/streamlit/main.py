@@ -1,13 +1,16 @@
+import shap as shap
 import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
 
 from category_encoders import OneHotEncoder, OrdinalEncoder
+from matplotlib import pyplot as plt
 from sklearn.ensemble import RandomForestClassifier
 import warnings
 from sklearn.exceptions import DataConversionWarning
 from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import plot_confusion_matrix
 
 warnings.filterwarnings(action='ignore', category=DataConversionWarning)
 
@@ -57,6 +60,8 @@ else:
 # Combines user input features with entire df dataset
 # This will be useful for the encoding phase
 df_raw = pd.read_csv('cleaned_data.csv')
+
+
 df_drop_target = df_raw.drop(columns=['Price_range'])
 df = pd.concat([input_df, df_drop_target], axis=0)
 # Drop columns
@@ -108,11 +113,12 @@ for col in encode:
     del df[col]
 
 lst_No = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'GREATER_THAN_10']
-# lst_Range = ['1-60', '61-70', '71-80', '81-90', '91-100', '101-200', '201-300', '301-1000']
 to_label_encoder(df, 'No_bedroom', lst_No)
 to_label_encoder(df, 'No_floor', lst_No)
 
+# lst_Range = ['1-60', '61-70', '71-80', '81-90', '91-100', '101-200', '201-300', '301-1000']
 # to_label_encoder(df, 'Price_range', lst_Range)
+
 # target_mapper = {0: '1-60', 1: '61-70', 2: '71-80', 3: '81-90', 4: '91-100', 5: '101-200', 6: '201-300', 7: '301-1000'}
 #
 # def target_encode(val):
@@ -133,9 +139,9 @@ else:
     st.write(data)
 
 # print(df.Price_range.value_counts())
-# # Separating X and y
+# Separating X and y
 # X = df.drop('Price_range', axis=1)
-# Y = df['Price_range']
+# Y = df_raw['Price_range']
 # # print(Y.value_counts())
 # # Build logistic regression model
 # clf = LogisticRegression()
@@ -160,3 +166,11 @@ st.write(df_price_ranges[prediction])
 
 st.subheader('Prediction Probability for each Price Range')
 st.write(prediction_proba)
+
+
+# Explaining the model's predictions using confusionMatrix
+
+st.header('Confusion Matrix')
+fig, (ax0, ax1) = plt.subplots(1, 2, figsize=(20, 8))
+plot_confusion_matrix(load_clf, df, prediction, ax=ax0)
+ax0.title.set_text('Confusion Matrix')
