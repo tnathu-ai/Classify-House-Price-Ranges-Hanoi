@@ -1,5 +1,6 @@
 import pandas as pd
 from category_encoders import OrdinalEncoder, OneHotEncoder
+from sklearn.linear_model import LogisticRegression
 
 df = pd.read_csv('cleaned_data.csv')
 # Drop columns
@@ -54,33 +55,29 @@ for col in encode:
     df = pd.concat([df, dummy], axis=1)
     del df[col]
 
-# df = to_one_hot_encoder(df, 'District')
-# df = to_one_hot_encoder(df, 'House_type')
-# df = to_one_hot_encoder(df, 'Legal_documents')
 lst_No = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'GREATER_THAN_10']
+lst_Range = ['1-60', '61-70', '71-80', '81-90', '91-100', '101-200', '201-300', '301-1000']
 to_label_encoder(df, 'No_bedroom', lst_No)
 to_label_encoder(df, 'No_floor', lst_No)
-
-target_mapper = {0: '1-60', 1: '61-70', 2: '71-80', 3: '81-90', 4: '91-100', 5: '101-200', 6: '201-300', 7: '301-1000'}
-
-
-def target_encode(val):
-    return target_mapper[val]
+to_label_encoder(df, 'Price_range', lst_Range)
 
 
-df['Price_range'] = df['Price_range'].apply(target_encode)
+# target_mapper = {0: '1-60', 1: '61-70', 2: '71-80', 3: '81-90', 4: '91-100', 5: '101-200', 6: '201-300', 7: '301-1000'}
+#
+# def target_encode(val):
+#     return target_mapper[val]
+#
+# df['Price_range'] = df['Price_range'].apply(target_encode)
 
 # Separating X and y
 X = df.drop('Price_range', axis=1)
 Y = df['Price_range']
 
-# Build random forest model
-from sklearn.ensemble import RandomForestClassifier
-
-clf = RandomForestClassifier()
+# Build logistic regression model
+clf = LogisticRegression()
 clf.fit(X, Y)
 
 # Saving the model
 import pickle
 
-pickle.dump(clf, open('RandomForestClassifier_clf.pkl', 'wb'))
+pickle.dump(clf, open('logisticdf.pkl', 'wb'))
