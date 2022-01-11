@@ -175,10 +175,10 @@ scripts resolved the issue by clear out all the output to run through the whole 
 |
 │── web_app                <- Source code for web app.
 │   │
-│   ├── dash_visualization           <- Scripts to visualize data using Dash
+│   ├── dash           <- Scripts to visualize data using Dash
 │   │   └── app.py
 │   │
-│   ├── prediction_model       <- Scripts to build preditive model using Rest API in Flask
+│   ├── streamlit       <- Scripts to build preditive model using Streamlit -  an open-source Python library 
 │     └── main.py
 |
 │── .gitignore                <- plain text file contains files/directories to ignore
