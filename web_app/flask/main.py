@@ -51,7 +51,7 @@ def to_one_hot_encoder(df, column_name):
     data = ohe.fit_transform(df[[column_name]])
 
     # create the dataframe base on data and the value will be integer
-    encode_df = pd.DataFrame(data=data, columns=ohe.get_feature_names([column_name]), dtype=int)
+    encode_df = pd.DataFrame(data=data, columns=ohe.get_feature_names_out([column_name]), dtype=int)
 
     # add the encoding dataframe back to the dataframe
     df.reset_index(inplace=True, drop=True)
@@ -126,12 +126,14 @@ def hello_world():
         algorithm = algomapper[algo]
         accuracy, recall, precision, f1score, model = algorithm
 
-        inputparam = [[District,
-                       House_type,
-                       Legal_documents,
-                       No_bedroom,
-                       No_floor,
-                       Month]]
+        # inputparam = [[District,
+        #                House_type,
+        #                Legal_documents,
+        #                No_bedroom,
+        #                No_floor,
+        #                Month]]
+
+        inputparam = df.drop('Price_range', axis=1)
 
         predict = model.predict(inputparam)
         predictedclass = classmapper[predict[0]]
