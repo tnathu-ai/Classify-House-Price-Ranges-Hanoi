@@ -68,9 +68,6 @@ in evaluating the model performance.
 
 Multiclass Classification Problem
 
-# Key Findings:
-
-# Application
 
 ## Future improvement:
 
