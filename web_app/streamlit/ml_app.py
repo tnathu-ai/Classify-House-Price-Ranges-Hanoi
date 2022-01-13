@@ -117,20 +117,6 @@ def run_ml_app():
     st.write('Awaiting CSV file to be uploaded. Currently using example input parameters (shown below).')
     st.write(data)
 
-    # print(df.Price_range.value_counts())
-    # Separating X and y
-    # X = df.drop('Price_range', axis=1)
-    # Y = df_raw['Price_range']
-    # # print(Y.value_counts())
-    # # Build logistic regression load_clf
-    # clf = LogisticRegression()
-    # clf.fit(X, Y)
-    #
-    # # Saving the load_clf
-    # import pickle
-    #
-    # pickle.dump(clf, open('logisticdf.pkl', 'wb'))
-
     # Reads in saved classification model
     load_clf = pickle.load(open('models/logisticdf.pkl', 'rb'))
 

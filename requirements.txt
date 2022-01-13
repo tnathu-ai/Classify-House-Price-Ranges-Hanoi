@@ -1,5 +1,6 @@
 # python == 3.8.8
-dash == 1.13.1
+# dash == 1.13.1
+dash
 plotly == 5.5.0
 pandas == 1.1.3
 # numpy == 1.18.5
@@ -15,5 +16,7 @@ imbalanced-learn == 0.8.1
 category_encoders
 seaborn==0.10.1
 matplotlib==3.2.2
+plotly==4.8.0
+streamlit==0.68.0
 joblib==0.16.0
 # OS : windows
