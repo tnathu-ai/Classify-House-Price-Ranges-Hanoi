@@ -208,8 +208,11 @@ streamlit run app.py
 │   │
 │   ├── streamlit       <- Scripts to build preditive model using Streamlit -  an open-source Python library 
 │     └── app.py
+|
 |── report.pdf 
+|
 │── Presentation_Group10.pdf 
+|
 │── .gitignore                <- plain text file contains files/directories to ignore
 
 ```
