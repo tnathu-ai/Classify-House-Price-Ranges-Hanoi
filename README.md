@@ -78,7 +78,7 @@ Multiclass Classification Problem
 
 ## Productionization
 
-In this step, I built a flask API endpoint that was hosted on a local webserver
+In this step, I built a Dash and Streamlit API endpoint that was hosted on a local webserver
 
 # WORKING ON YOUR LOCAL COMPUTER
 
@@ -173,7 +173,6 @@ streamlit run app.py
 │   ├── processed      <- The final, canonical data sets for modeling.
 │   └── raw            <- The original, immutable data dump.
 │
-├── docs               <- A default Sphinx project; see sphinx-doc.org for details
 │
 ├── models             <- Trained and serialized models, model predictions, or model summaries
 │
@@ -181,15 +180,12 @@ streamlit run app.py
 │                         the creator's initials, and a short `-` delimited description, e.g.
 │                         `1.0-jqp-initial-data-exploration`.
 │
-├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-│
 ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
 │   └── figures        <- Generated graphics and figures to be used in reporting
 │
 ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
 │                         generated with `pip freeze > requirements.txt`
 │
-├── setup.py           <- Make this project pip installable with `pip install -e`
 |
 ├── src                <- Source code for use in this project.
 │   ├── __init__.py    <- Makes src a Python module
@@ -214,10 +210,9 @@ streamlit run app.py
 │   │   └── app.py
 │   │
 │   ├── streamlit       <- Scripts to build preditive model using Streamlit -  an open-source Python library 
-│     └── main.py
+│     └── app.py
 |
 │── .gitignore                <- plain text file contains files/directories to ignore
-|
-└── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
+
 ```
 
