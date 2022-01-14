@@ -11,6 +11,8 @@ We will discuss:
 3. Feature Selection
 4. Model Training
 5. Obtaining Predictions / Scoring
+6. Deploy by building a Dash and Streamlit API endpoint that was hosted on a local webserver
+
 
 # Data
 
@@ -73,9 +75,7 @@ Multiclass Classification Problem
 
 + I would like to try out more stacking and ensemble methods to improve the model.
 
-## Productionization
 
-In this step, I built a Dash and Streamlit API endpoint that was hosted on a local webserver
 
 # WORKING ON YOUR LOCAL COMPUTER
 
