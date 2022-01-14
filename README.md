@@ -42,9 +42,7 @@ performance with the:
 
 ### Metrics
 
-Metrics like accuracy, precision, recall are good ways to evaluate classification models for balanced datasets, but if
-the data is imbalanced and there’s a class disparity, then other methods like ROC/AUC, Gini coefficient perform better
-in evaluating the model performance.
+Metrics like accuracy, precision, recall are good ways to evaluate classification models for balanced datasets like what we would do in the project
 
 ### How do I download the dataset?
 
