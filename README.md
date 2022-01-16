@@ -1,8 +1,8 @@
 # Assignment 3: Group 10 Project - COSC2789
 
-# Machine Learning Pipeline - Data Analysis
+![eda](../reports/figures/eda.png)
+![ML](../reports/figures/prediction.png)
 
-In the following notebooks, we will go through the implementation of each of the steps in the Machine Learning Pipeline.
 
 We will discuss:
 
