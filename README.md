@@ -1,7 +1,7 @@
 # Assignment 3: Group 10 Project - COSC2789
 
-![eda](../reports/figures/eda.png)
-![ML](../reports/figures/prediction.png)
+![eda](reports/figures/eda.png)
+![ML](reports/figures/prediction.png)
 
 
 We will discuss:
