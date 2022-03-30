@@ -209,7 +209,6 @@ streamlit run app.py
 |
 |── report.pdf 
 |
-│── Presentation_Group10.pdf 
 |
 │── .gitignore                <- plain text file contains files/directories to ignore
 
