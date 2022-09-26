@@ -1,4 +1,4 @@
-# Assignment 3: Group 10 Project - COSC2789
+# Classify House Price Ranges in Hanoi
 
 ![eda](reports/figures/eda.jpg)
 ![ML](reports/figures/prediction.jpg)
